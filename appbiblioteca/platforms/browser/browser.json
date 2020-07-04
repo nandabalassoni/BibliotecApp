@@ -1,0 +1,32 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.maria.appbiblioteca"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.maria.appbiblioteca"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+      "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+      "pluginId": "com.telerik.plugins.nativepagetransitions",
+      "clobbers": [
+        "window.plugins.nativepagetransitions"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.4",
+    "com.telerik.plugins.nativepagetransitions": "0.7.0"
+  }
+}
