@@ -18,6 +18,12 @@ body {
     margin-top: 3%;
 }
 
+#navbar .navbar {
+    border-radius: 21px;
+    width: 106%;
+    margin-left: -2%;
+}
+
 h1{
     font-size: 33px !important;
     padding-top: 28px;
@@ -46,4 +52,13 @@ p {
 
 #button {
     margin-left: -27%;
+}
+
+#corpo {
+    margin-top: 4%;
+}
+
+#imagemCorpo{
+    width: 100%;
+    height: 151%;
 }
