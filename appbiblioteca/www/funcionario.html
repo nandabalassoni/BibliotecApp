@@ -50,9 +50,8 @@
                     <table class="table-responsive" border="1"> 
                         <tr>
                             <th> IdLivro </th>
-                            <th> Título </th>
-                            <th> Gênero </th>
-                            <th> Autor </th>
+                            <th> Nome funcionario </th>
+                            <th> CPF </th>
                         </tr>
                     </table>
                 </div>
@@ -61,17 +60,17 @@
             <div class="row">
                 <div class="col-md-12" id="voltar">
                     <a href="home.html"><button type="button" class="btn btn-outline-danger btn-lg btn-block" id="button">voltar</button></a>
-                    <a href="#"><button type="button" class="btn btn-outline-danger btn-lg btn-block" id="cadastrar" data-toggle="modal" data-target="#cadastroLivroModal">novo</button></a>
+                    <a href="#"><button type="button" class="btn btn-outline-danger btn-lg btn-block" id="cadastrar" data-toggle="modal" data-target="#cadastroFuncModal">novo</button></a>
                 </div>
             </div>
 
             <!-- Cadastro Modal -->
 
-            <div class="modal fade" id="cadastroLivroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroLivroModalLabel" aria-hidden="true">
+            <div class="modal fade" id="cadastroFuncModal" tabindex="-1" role="dialog" aria-labelledby="cadastroFuncModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="cadastroLivroModalLabel">Cadastrar novo livro</h5>
+                            <h5 class="modal-title" id="cadastroFuncModalLabel">Cadastrar novo livro</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -79,16 +78,12 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Título</label>
-                                    <input type="text" class="form-control" id="recipient-titulo" required />
+                                    <label for="recipient-name" class="col-form-label">Nome</label>
+                                    <input type="text" class="form-control" id="recipient-name" required />
                                 </div>
                                 <div class="form-group">
-                                    <label for="recipient-ra" class="col-form-label">Genero</label>
-                                    <input type="text" class="form-control" id="recipient-genero" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="recipient-cpf" class="col-form-label">Autor</label>
-                                    <input type="text" class="form-control" id="recipient-autor" required />
+                                    <label for="recipient-cpf" class="col-form-label">CPF</label>
+                                    <input type="text" class="form-control" id="recipient-cpf" required />
                                 </div>
                             </form>
                         </div>
