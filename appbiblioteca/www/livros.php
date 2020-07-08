@@ -1,6 +1,7 @@
 <?php
-	session_start();
-	include 'bd.php';
+    session_start();
+    include 'bd.php';
+
 ?>
 
 <!DOCTYPE html>
