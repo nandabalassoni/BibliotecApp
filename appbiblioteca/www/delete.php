@@ -11,7 +11,7 @@
 	if($result_delete)
 		echo "<script> location.href='aluno.php?p=inicial'</script>";
 	else
-		echo "<script> alert('Não foi possível deletar usuário.');location.href='exibe.php?p=inicial';
+		echo "<script> alert('Não foi possível deletar usuário.');location.href='aluno.php?p=inicial';
 			</script>";
 
 ?>
