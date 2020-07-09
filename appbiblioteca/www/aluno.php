@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	include 'bd.php';
 ?>
 
@@ -78,7 +77,7 @@
                                         <td><?php echo($aluno['ra']); ?></td>				
                                         <td><?php echo($aluno['cpf']); ?></td>
                                         <td><a href="delete.php?idaluno=<?php echo $aluno['idaluno']; ?>">Excluir</a>
-										<a href="edit.php?idaluno=<?php echo $aluno['idaluno']; ?>">Editar</a></td>
+										<a href="editar.php?idaluno=<?php echo $aluno['idaluno']; ?>">Editar</a></td>
                                     </tr>	
                                     <?php endforeach; ?>				
                             <?php } ?>
@@ -96,7 +95,7 @@
 
             <!-- Cadastro Modal -->
 
-            <div id="cadastroAlunoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="cadastroAlunoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -138,6 +137,54 @@
 				</div>
 			</div>
         </div>
+
+        <!-- Editar Modal -->
+
+        <div id="EditarAlunoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="EditarAlunoModalLabel">Editar Aluno</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+                    </div>
+                    
+					<div class="modal-body">
+						<form method="post" id="insert_form1" action="editarAluno.php">
+							<div class="form-group row">
+								<label class="col-sm-2 col-form-label">Nome</label>
+								<div class="col-sm-10">
+									<input name="nome" type="text" class="form-control" id="nome" placeholder="Nome completo" value="<?php echo ($aluno['nome']); ?>">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label class="col-sm-2 col-form-label">RA</label>
+								<div class="col-sm-10">
+									<input name="ra" type="text" class="form-control" id="ra" placeholder="RA do aluno" value="<?php echo ($aluno['ra']); ?>">
+								</div>
+                            </div>
+
+                            <div class="form-group row">
+								<label class="col-sm-2 col-form-label">CPF</label>
+								<div class="col-sm-10">
+									<input name="cpf" type="text" class="form-control" id="cpf" placeholder="CPF do aluno" value="<?php echo ($aluno['cpf']); ?>">
+								</div>
+                            </div>
+                            
+							<div class="form-group row">
+								<div class="col-sm-10">
+									<input type="submit" name="EditAluno" id="EditAluno" value="Editar" class="btn btn-outline-success">
+								</div>
+							</div>
+                        </form>
+					</div>
+				</div>
+			</div>
+        </div>
+
+        
 
     </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

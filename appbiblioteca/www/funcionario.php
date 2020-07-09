@@ -77,7 +77,7 @@
                                         <td><?php echo($funcionario['nomeFuncionario']); ?></td>			
                                         <td><?php echo($funcionario['cpf']); ?></td>
                                         <td><a href="deleteFunc.php?idfuncionario=<?php echo $funcionario['idfuncionario']; ?>">Excluir</a>
-										<a href="edit.php?idaluno=<?php echo $aluno['idaluno']; ?>">Editar</a></td>
+										<a href="editarFunc.php?idfuncionario=<?php echo $funcionario['idfuncionario']; ?>">Editar</a></td>
                                     </tr>	
                                     <?php endforeach; ?>				
                             <?php } ?>

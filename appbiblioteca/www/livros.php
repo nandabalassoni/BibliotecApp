@@ -80,7 +80,7 @@
                                         <td><?php echo($livro['genero']); ?></td>				
                                         <td><?php echo($livro['autor']); ?></td>
                                         <td><a href="deleteLivros.php?idlivro=<?php echo $livro['idlivro']; ?>">Excluir</a>
-										<a href="edit.php?idaluno=<?php echo $aluno['idaluno']; ?>">Editar</a></td>
+										<a href="editarLivros.php?idlivro=<?php echo $livro['idlivro']; ?>">Editar</a></td>
                                     </tr>	
                                     <?php endforeach; ?>				
                             <?php } ?>
