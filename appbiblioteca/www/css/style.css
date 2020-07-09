@@ -82,10 +82,20 @@ th {
     text-align: center !important;
 }
 
+.formulario{
+    margin-top: 7%;
+}
+
 #voltar {
     margin: 79% 72%;
     margin-left: 5%;
     margin-top: -58%;
+}
+
+#voltarEditar{
+    margin: 79% 72%;
+    margin-left: 5%;
+    margin-top: -91%;
 }
 
 #voltarLivros{
@@ -97,7 +107,7 @@ th {
 #voltarFunc {
     margin: 79% 72%;
     margin-left: 5%;
-    margin-top: -72%;
+    margin-top: -54%;
 }
 
 #cadastrar {
