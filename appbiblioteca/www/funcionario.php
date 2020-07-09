@@ -76,6 +76,8 @@
                                         <td><?php echo($funcionario['idfuncionario']); ?></td>
                                         <td><?php echo($funcionario['nomeFuncionario']); ?></td>			
                                         <td><?php echo($funcionario['cpf']); ?></td>
+                                        <td><a href="deleteFunc.php?idfuncionario=<?php echo $funcionario['idfuncionario']; ?>">Excluir</a>
+										<a href="edit.php?idaluno=<?php echo $aluno['idaluno']; ?>">Editar</a></td>
                                     </tr>	
                                     <?php endforeach; ?>				
                             <?php } ?>
@@ -103,21 +105,28 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Nome</label>
-                                    <input type="text" class="form-control" id="recipient-name" placeholder="Nome do(a) funcionário(a)" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="recipient-cpf" class="col-form-label">CPF</label>
-                                    <input type="text" class="form-control" id="recipient-cpf" placeholder="CPF do(a) funcionário(a)" required />
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
-                        </div>
+						<form method="post" id="insert_form" action="cadastrarFunc.php">
+							<div class="form-group row">
+								<label class="col-sm-2 col-form-label">Nome</label>
+								<div class="col-sm-10">
+									<input name="nome" type="text" class="form-control" id="nome" placeholder="Nome do funcionario">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label class="col-sm-2 col-form-label">CPF</label>
+								<div class="col-sm-10">
+									<input name="cpf" type="text" class="form-control" id="cpf" placeholder="CPF do(a) funcionário(a)">
+								</div>
+                            </div>
+                            
+							<div class="form-group row">
+								<div class="col-sm-10">
+									<input type="submit" name="CadFunc" id="CadFunc" value="Cadastrar" class="btn btn-outline-success">
+								</div>
+							</div>
+						</form>
+					</div>
                     </div>
                 </div>
             </div>

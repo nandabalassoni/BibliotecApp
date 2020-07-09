@@ -79,6 +79,8 @@
                                         <td><?php echo($livro['titulo']); ?></td>
                                         <td><?php echo($livro['genero']); ?></td>				
                                         <td><?php echo($livro['autor']); ?></td>
+                                        <td><a href="deleteLivros.php?idlivro=<?php echo $livro['idlivro']; ?>">Excluir</a>
+										<a href="edit.php?idaluno=<?php echo $aluno['idaluno']; ?>">Editar</a></td>
                                     </tr>	
                                     <?php endforeach; ?>				
                             <?php } ?>
@@ -106,25 +108,35 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="recipient-titulo" class="col-form-label">Título</label>
-                                    <input type="text" class="form-control" id="recipient-titulo" placeholder="Título do livro" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="recipient-genero" class="col-form-label">Genero</label>
-                                    <input type="text" class="form-control" id="recipient-genero" placeholder="Gênero do livro" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="recipient-autor" class="col-form-label">Autor(a)</label>
-                                    <input type="text" class="form-control" id="recipient-autor" placeholder="Autor(a) do livro" required />
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
-                        </div>
+						<form method="post" id="insert_form" action="cadastrarLivro.php">
+							<div class="form-group row">
+								<label class="col-sm-2 col-form-label">Título</label>
+								<div class="col-sm-10">
+									<input name="titulo" type="text" class="form-control" id="titulo" placeholder="Título do livro">
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<label class="col-sm-2 col-form-label">Gênero</label>
+								<div class="col-sm-10">
+									<input name="genero" type="text" class="form-control" id="genero" placeholder="Gênero do livro (romance, ficção, etc)">
+								</div>
+                            </div>
+
+                            <div class="form-group row">
+								<label class="col-sm-2 col-form-label">Autor(a)</label>
+								<div class="col-sm-10">
+									<input name="autor" type="text" class="form-control" id="autor" placeholder="Autor(a) do livro">
+								</div>
+                            </div>
+                            
+							<div class="form-group row">
+								<div class="col-sm-10">
+									<input type="submit" name="CadUser" id="CadLivro" value="Cadastrar" class="btn btn-outline-success">
+								</div>
+							</div>
+						</form>
+					</div>
                     </div>
                 </div>
             </div>
