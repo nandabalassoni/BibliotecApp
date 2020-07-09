@@ -78,7 +78,7 @@
                                         <td><?php echo($aluno['ra']); ?></td>				
                                         <td><?php echo($aluno['cpf']); ?></td>
                                         <td><a href="delete.php?idaluno=<?php echo $aluno['idaluno']; ?>">Excluir</a>
-										<a href="edit.php?idcontato=<?php echo $contato['idcontato']; ?>">Editar</a></td>
+										<a href="edit.php?idaluno=<?php echo $aluno['idaluno']; ?>">Editar</a></td>
                                     </tr>	
                                     <?php endforeach; ?>				
                             <?php } ?>
@@ -130,7 +130,7 @@
                             
 							<div class="form-group row">
 								<div class="col-sm-10">
-									<input type="submit" name="CadUser" id="CadUser" value="Cadastrar" class="btn btn-outline-success">
+									<input type="submit" name="CadUser" id="CadAluno" value="Cadastrar" class="btn btn-outline-success">
 								</div>
 							</div>
 						</form>
